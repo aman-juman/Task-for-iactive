@@ -1,0 +1,148 @@
+@import "./globals";
+.wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 885px;
+  background-color: white;
+  margin: 50px 0;
+
+  .row {
+    display: flex;
+
+    .user {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+
+      font-size: 14px;
+      color: $gray;
+    }
+
+    .content {
+      .topContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 810px;
+
+        .author {
+          font-weight: 400;
+          font-size: 16px;
+          color: $gray;
+
+          p {
+            font-size: 12px;
+            font-style: italic;
+          }
+        }
+
+        .buttonsWrap {
+          display: flex;
+          align-items: center;
+
+          .directionBtnWrap {
+            margin-right: 30px;
+            display: flex;
+            width: 210px;
+            height: 28px;
+            justify-content: space-between;
+            align-items: center;
+
+            .directionBtn {
+              font-size: 11px;
+              color: $blue;
+              background-color: transparent;
+              border-radius: 2px;
+              border: 1px solid $blue;
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 64px;
+              height: 28px;
+
+              &:hover {
+                background-color: $blue;
+                color: white;
+              }
+
+
+            }
+
+          }
+
+          .settingWrap {
+            width: 110px;
+            height: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .settingBtnStroke {
+              cursor: pointer;
+              &:hover{
+                stroke: $blue;
+              }
+            }
+
+
+            .settingBtn {
+              cursor: pointer;
+
+              &:hover {
+                fill: $blue;
+              }
+            }
+            .active{
+              fill: $blue;
+            }
+          }
+        }
+      }
+
+      .text {
+        margin-top: 5px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.35;
+        color: #333333;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .next {
+          margin-top: 10px;
+          font-size: 12px;
+          color: $gray;
+          cursor: pointer;
+
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+
+      .image {
+        margin: 8px 0;
+        height: 145px;
+        width: 260px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .tags {
+    display: flex;
+    color: $gray;
+    .tag{
+      cursor: pointer;
+    }
+    .tag:nth-child(even){
+      margin: 0 10px;
+    }
+  }
+  .active{
+    color: $blue;
+  }
+}
